@@ -1,0 +1,29 @@
+This is a pre-release version of the Volturnus IRCd config admin!
+You'll probably want to take a look at the INSTALL file. It's not
+much, but it should give you a general idea of how to set up
+everything and get it working. If you can't, come talk to us on
+IRC:
+
+irc.volturnus.net #volturnus
+
+IMPORTANT NOTE:
+By default, the instant rehash bot is enabled. This is only really
+useful if you are using remote includes. If you don't want it,
+just comment it out in index.php. There's a note!
+
+There are probably still a few bugs, so you may not want to use
+this in the real world yet. This release is only intended as
+a pre-release, so some of the development features have not
+yet been implemented. There's plenty on the TODO list, so feel
+free to come by and see where things stand.
+
+If you find a bug, report it at:
+
+http://www.e-cabi.net/bugs/
+
+The following IRCds are being worked on and will be
+released later:
+
+InspIRCd 1.2
+Charybdis 3.1
+Ratbox 2.2

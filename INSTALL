@@ -1,0 +1,64 @@
+ Requirements:
+ 
+ You must have PHP and MySQL installed on your web server in order for this 
+ to work. For the instant rehash bot, you need to have php_sockets enabled
+ so that the bot can connect to the network. For the perl script, you will
+ need to have the Digest::MD5 perl module installed. You should have a cron
+ program installed to use the cron that runs the perl script.
+ 
+ Setup:
+ 
+ You will need to extract the files. There will be many folders - the only
+ one you need to upload to your web server is the "php" folder. You may
+ rename the folder to whatever you want or move the files anywhere as long
+ as you keep the hierarchy in place.
+ 
+ Web:
+ 
+ You will need to put "config.sql" into your MySQL server. You may enter this
+ data in however you'd like, but make sure you have access to create tables.
+ If you're not sure, ask your web host.
+ 
+ IRCd:
+ 
+ There are two ways to manage your IRCd - a crontab or a remote include.
+ Each IRCd must be set up differently, so please read the directions for 
+ the appropriate IRCd.
+ 
+	The following IRCds must use the crontab:
+
+	The following IRCds may use remote includes OR the cron:
+		UnrealIRCd
+
+ To actually configure the IRCd, please see the example documents in the
+ "ircd" folder.
+
+ Crontab:
+ 
+ WINDOWS USERS:
+ This hasn't been tested on Windows yet, so you're on your own. However, 
+ should you want to attempt, you will need to install CRON for 
+ Windows or use the Windows Task Schduler/at command to make this 
+ work properly.
+ 
+ For *nix/*BSD users, something like this should work:
+ 
+ 0,15,30,45 * * * * /home/username/Unreal3.2/config.pl >> /dev/null 2>&1
+ 
+ The above cron should check for updates every 15 minutes. Adjust
+ it to meet your needs.
+ 
+ The Perl script that drives the system should be placed in the appropriate
+ directory:
+ 
+ Unreal32 - Place config.pl in the Unreal3.2 folder. Depending on how
+ you installed your IRCd, you may not have this. In any case, place it in
+ the same directory as the PID file.
+ 
+ Remote Includes:
+ 
+ You MUST make sure that your IRCd is set up properly for remote includes.
+ See the documentation for your IRCd to figure out how!
+ 
+ You won't need the cron or Perl script for this option. There is an example
+ remote include in the example .conf file.
